@@ -40,9 +40,10 @@ body {
 .individual-match {
   width: 25em;
   height: 125px;
-  margin: 0 auto;
-  border-radius: 25px;
   border: 2px solid #A4A4A4;
+  border-radius: 25px;
+  margin: 0 auto;
+  margin-bottom: 3em;
 }
 
 .thumbnail {
