@@ -24,8 +24,14 @@ body {
   margin: 0 auto;
 }
 
-.search-container input:last-child {
+.search-container input:nth-child(2) {
   margin-left: 18px;
+}
+
+.search-container input:last-child {
+  width: 380px;
+  display: block;
+  margin-top: 10px;
 }
 
 .matches-container {
