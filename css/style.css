@@ -18,14 +18,10 @@ body {
 }
 
 .search-container input {
-  width: 172px;
+  width: 380px;
   height: 30px;
   display: inline-block;
   margin: 0 auto;
-}
-
-.search-container input:nth-child(2) {
-  margin-left: 18px;
 }
 
 .search-container input:last-child {

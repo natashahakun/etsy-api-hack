@@ -13,15 +13,23 @@ $(document).ready(function() {
 
 function getRequest(searchTerm){
   var params = {
-    part: "",
-    key: "",
-    q:
+    keywords: searchTerm,
+    api_key: "c03v0gzczhnbj4b0rw4aaoh0"
   };
-  url = "";
+  url = "https://openapi.etsy.com/v2/listings/active.js";
 
-  $.getJSON(url, params, function(data){
-    showResults(data);
-  });
+  $.ajax({
+    url: url,
+    data: params,
+    type: "GET",
+    dataType: "jsonp",
+    success: function(data) {
+      showResults(data.results);
+    },
+    error: function(data){
+      console.log(data,'error');
+    }
+  })
 }
 
 function showResults(results) {
@@ -30,6 +38,8 @@ function showResults(results) {
   var newThumbnail = $("<div></div>", {class: "thumbnail"})
   $(newMatch).append(newThumbnail);
   var newLink = $("<div></div>", {class: "link"})
+  console.log(results[0].title);
   $(newMatch).append(newLink);
+  newLink.text = results[0].title;
 }
 
