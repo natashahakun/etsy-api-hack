@@ -33,13 +33,15 @@ function getRequest(searchTerm){
 }
 
 function showResults(results) {
-  var newMatch = $("<div></div>", {class: "individual-match"});
-  $(".matches").append(newMatch);
-  var newThumbnail = $("<div></div>", {class: "thumbnail"})
-  $(newMatch).append(newThumbnail);
-  var newLink = $("<div></div>", {class: "link"})
-  console.log(results[0].title);
-  $(newMatch).append(newLink);
-  newLink.text = results[0].title;
+  for (i = 0; i < results.length; i++) {
+    var newMatch = $("<div></div>", {class: "individual-match"});
+    $(".matches").append(newMatch);
+    var newThumbnail = $("<div></div>", {class: "thumbnail"})
+    $(newMatch).append(newThumbnail);
+    var newLink = $("<div></div>", {class: "link"})
+    $(newMatch).append(newLink);
+    var text = results[i].title;
+    $(newLink).append(text);
+  }
 }
 
