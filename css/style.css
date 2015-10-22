@@ -38,6 +38,7 @@ body {
 .matches-title {
   width: 25em;
   margin: 0 auto;
+  visibility: hidden;
 }
 
 .individual-match {

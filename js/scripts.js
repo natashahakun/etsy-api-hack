@@ -3,6 +3,7 @@ $(document).ready(function() {
   $(".submit").click(function(event) {
     event.preventDefault();
     clearBox();
+    $(".matches-title").css("visibility", "visible");
     var searchTerm = $(".search-items").val();
     getRequest(searchTerm);
     $(".search-items").val('');
