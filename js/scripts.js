@@ -2,14 +2,18 @@ $(document).ready(function() {
 
   $(".submit").click(function(event) {
     event.preventDefault();
+    clearBox();
     var searchTerm = $(".search-items").val();
     getRequest(searchTerm);
-
     $(".search-items").val('');
     $(".search-shop").val('');
   })
 
 });
+
+function clearBox() {
+  $( ".individual-match" ).remove();
+}
 
 function getRequest(searchTerm){
   var params = {
